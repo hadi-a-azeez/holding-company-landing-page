@@ -7,7 +7,7 @@ export interface tabItemInterface {
 export const tabs: tabItemInterface[] = [
   {
     id: 1,
-    title: 'Web Development',
+    title: 'Development',
   },
   {
     id: 2,

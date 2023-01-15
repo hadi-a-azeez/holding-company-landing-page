@@ -4,16 +4,16 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className='w-full bg-white shadow'>
+    <nav className='w-full bg-darkBlue text-white'>
       <div className='mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl'>
         <div>
           <div className='flex items-center justify-between py-3 md:block md:py-5'>
             <a href='javascript:void(0)'>
-              <h2 className='text-2xl font-bold'>LOGO</h2>
+              <h2 className='text-2xl font-bold text-green'>Page In</h2>
             </a>
             <div className='md:hidden'>
               <button
-                className='rounded-md p-2 text-gray-700 outline-none focus:border focus:border-gray-400'
+                className='text-gray-700 focus:border-gray-400 rounded-md p-2 outline-none focus:border'
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -55,18 +55,24 @@ export default function NavBar() {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
-              <li className='text-gray-600 hover:text-blue-600'>
+            <ul className='items-center justify-center space-y-5 md:flex md:space-x-6 md:space-y-0'>
+              <li className='text-gray-600 hover:text-green'>
                 <a href='javascript:void(0)'>Home</a>
               </li>
-              <li className='text-gray-600 hover:text-blue-600'>
-                <a href='javascript:void(0)'>Blog</a>
+              <li className='text-gray-600 hover:text-green'>
+                <a href='javascript:void(0)'>Services</a>
               </li>
-              <li className='text-gray-600 hover:text-blue-600'>
+              <li className='text-gray-600 hover:text-green'>
                 <a href='javascript:void(0)'>About US</a>
               </li>
-              <li className='text-gray-600 hover:text-blue-600'>
-                <a href='javascript:void(0)'>Contact US</a>
+              <li className='text-gray-600 hover:text-green'>
+                <a href='javascript:void(0)'>Products</a>
+              </li>
+              <li className='text-gray-600 hover:text-green'>
+                <a href='javascript:void(0)'>Blogs</a>
+              </li>
+              <li className='text-gray-600 w-fit rounded-full bg-white px-4 py-2 text-gray hover:text-green'>
+                <a href='javascript:void(0)'>Contact Us</a>
               </li>
             </ul>
           </div>

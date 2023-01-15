@@ -7,6 +7,7 @@ interface TabItemPropsInterface {
   title: string;
   description: string;
   isExpand?: boolean;
+  isLast?: boolean;
 }
 
 const TabItem = ({
@@ -16,16 +17,14 @@ const TabItem = ({
 }: TabItemPropsInterface) => {
   const [isExpanded, setIsExpand] = useState(isExpand);
   return (
-    <div className='grid w-full grid-cols-fill-auto gap-2 border-b-[1px] border-offWhite py-6'>
-      <div className='flex flex-col gap-2 text-white'>
-        <h1
-          className='text-2xl font-semibold'
-          onClick={() => {
-            setIsExpand(!isExpanded);
-          }}
-        >
-          {title}
-        </h1>
+    <div className='grid w-full grid-cols-fill-auto gap-2 py-6'>
+      <div
+        className='flex cursor-pointer flex-col gap-2 text-white'
+        onClick={() => {
+          setIsExpand(!isExpanded);
+        }}
+      >
+        <h1 className='text-2xl font-semibold'>{title}</h1>
         {isExpanded && (
           <>
             <p className='text-lg font-normal text-offWhite'>{description}</p>
